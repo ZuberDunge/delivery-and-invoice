@@ -15,7 +15,6 @@ function Home() {
     console.log(shippingData);
     return (
         <>
-
             <div className="table">
                 <TableContainer component={Paper}>
                     <Table sx={{ maxWidth: 1000, margin: "auto" }} aria-label="simple table">
@@ -42,7 +41,6 @@ function Home() {
                         </TableBody>
                     </Table>
                 </TableContainer>
-
             </div>
             <div>
                 <h2>Chnages from the Development Branch</h2>
