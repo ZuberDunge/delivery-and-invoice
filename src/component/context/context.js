@@ -14,6 +14,7 @@ const ShippingDataProvider = (props) => {
             customerName: "Paritosh",
             Address: 'Timarpur',
             sellerName: "flipkart",
+            paymentMode: "COD"
         },
         {
             id: 2,
@@ -26,6 +27,7 @@ const ShippingDataProvider = (props) => {
             customerName: "Rahul",
             Address: 'sant nagar',
             sellerName: "Grocery Guru",
+            paymentMode: "Paid"
         }, {
             id: 3,
             status: 'Delivered',
@@ -37,6 +39,7 @@ const ShippingDataProvider = (props) => {
             customerName: "Viraj",
             Address: 'Gujrat',
             sellerName: "Amazon",
+            paymentMode: "Paid"
         },
         {
             id: 4,
@@ -49,6 +52,7 @@ const ShippingDataProvider = (props) => {
             customerName: "Rahul",
             Address: 'New Delhi',
             sellerName: "Paritosh",
+            paymentMode: "COD"
         },
     ])
     const shippingData = shippingDetails;
