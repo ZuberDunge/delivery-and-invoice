@@ -32,10 +32,10 @@ function Home() {
                                     key={item.id}
                                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                 >
-                                    <TableCell component="th" scope="row"><Link to={`/students/view/${item.id}`}>{item.itemName}</Link></TableCell>
+                                    <TableCell component="th" scope="row"><Link to={`/order/view/${item.id}`}>{item.itemName}</Link></TableCell>
                                     <TableCell className="HIDE-ON-PHONE" align="right">{item.status}</TableCell>
                                     <TableCell className="HIDE-ON-PHONE" align="right">{item.status === "Delivered" ? "Delivered" : "On the Way"}</TableCell>
-                                    <TableCell align="right"><button disabled={item.status === "Delivered" ? false : true} className="get-invoice">Get Invoice</button></TableCell>
+                                    <TableCell align="right"><Link to={`/invoice/view/${item.id}`} ><button disabled={item.status === "Delivered" ? false : true} className="get-invoice">Get Invoice</button></Link></TableCell>
                                 </TableRow>
                             ))}
                         </TableBody>

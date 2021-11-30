@@ -2,9 +2,9 @@ import React from 'react'
 import "./Style/Login.css"
 function Login() {
     return (
-        <div>
+        <div className="login-page">
 
-            <div className="log-in-btn">Login</div>
+            <div>Paritosh Bhai Login Page Dalo Yaha</div>
 
         </div>
     );

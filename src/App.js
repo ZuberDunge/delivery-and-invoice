@@ -4,6 +4,7 @@ import Home from './component/home/home';
 import Navbar from './component/navbar/Navbar'
 import ShippingDataProvider from './component/context/context';
 import Login from './component/Login';
+import Invoice from './component/Invoice';
 function App() {
   return (
 
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/invoice/view/:id' element={<Invoice />} />
         </Routes>
 
       </ShippingDataProvider>
