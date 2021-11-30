@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './component/home/home';
 import Navbar from './component/navbar/Navbar'
@@ -8,10 +8,6 @@ import Invoice from './component/Invoice';
 import OrderDetailsPage from './component/OrderDetailsPage';
 
 function App() {
-
-
-
-
   return (
     <div className="App">
       <>

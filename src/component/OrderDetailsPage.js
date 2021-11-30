@@ -10,7 +10,6 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
@@ -44,7 +43,7 @@ function OrderDetailsPage() {
     useEffect(() => {
         const updatedStatus = userDetails
         updateStatus(parseInt(id), updatedStatus)
-    }, [userDetails])
+    })
 
 
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import "../Style/Nav.css"
 import { NavLink } from 'react-router-dom'
-import { useState, useEffect } from 'react'
 function Navbar() {
 
 
