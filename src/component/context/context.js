@@ -57,8 +57,13 @@ const ShippingDataProvider = (props) => {
     ])
     const shippingData = shippingDetails;
 
+    const updateStatus = (id, updatedStatus) => {
+        console.log(updatedStatus);
+        setShippingDeatils(shippingDetails.map((order) => order.id === parseInt(id) ? updatedStatus : order))
+    }
+
     return (
-        <ShippingDataContext.Provider value={{ shippingData }}>
+        <ShippingDataContext.Provider value={{ shippingData, updateStatus }}>
             {props.children}
         </ShippingDataContext.Provider >
     );

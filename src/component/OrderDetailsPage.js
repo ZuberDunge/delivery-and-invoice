@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import "./Style/Invoice.css"
 import { useParams, useNavigate } from "react-router-dom";
 import { ShippingDataContext } from './context/context';
@@ -9,21 +9,68 @@ import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 function OrderDetailsPage() {
-    const { shippingData } = useContext(ShippingDataContext);
+    const { shippingData, updateStatus } = useContext(ShippingDataContext);
     const { id } = useParams()
     let back = useNavigate();
     let OrderDeatil = shippingData.find(order => order.id === parseInt(id))
     let shippingCharges = 50;
-    let currentDate = (new Date()).toString().split(' ').splice(1, 3).join(' ');
+
+    const [userDetails, setuserDetails] = useState({
+        id: OrderDeatil.id, status: OrderDeatil.status,
+        itemName: OrderDeatil.itemName,
+        orderId: OrderDeatil.orderId,
+        orderDate: OrderDeatil.orderDate,
+        price: OrderDeatil.price,
+        quantity: OrderDeatil.quantity,
+        customerName: OrderDeatil.customerName,
+        Address: OrderDeatil.Address,
+        sellerName: OrderDeatil.sellerName,
+        paymentMode: OrderDeatil.paymentMode
+    });
+
+
+    const handleChange = (e) => {
+        console.log("clicked");
+        setuserDetails({ ...userDetails, [e.target.name]: e.target.value })
+
+    }
+    useEffect(() => {
+        const updatedStatus = userDetails
+        updateStatus(parseInt(id), updatedStatus)
+    }, [userDetails])
+
+
+
     return (
         <div className="invoice-container">
             <div className="flex">
                 <h3>Order Number : {OrderDeatil.orderId} </h3>
                 <h3>Order Date : {OrderDeatil.orderDate} </h3>
             </div>
+            <div className="mark-delivered">
+                <Box sx={{ minWidth: 120 }}>
+                    <FormControl fullWidth>
 
+                        <Select
+                            name="status"
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={userDetails.status}
+                            onChange={handleChange}
+                        >
+                            <MenuItem value={"Delivered"}>Delivered</MenuItem>
+                            <MenuItem value={"In Transit"}>In - Transit</MenuItem>
+                        </Select>
+                    </FormControl>
+                </Box>
+            </div>
             <TableContainer component={Paper}>
                 <Table sx={{ maxWidth: 1400, margin: "auto" }} aria-label="simple table">
                     <TableBody>
