@@ -87,3 +87,23 @@ td {
 .get-invoice {
     cursor: pointer;
 }
+
+.mark-delivered {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-around;
+
+    align-items: center;
+}
+
+.fa-arrow-circle-left {
+    font-size: 2rem;
+    color: #E63946;
+    cursor: pointer;
+}
+
+.dropdown {}
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+    padding: 8px !important;
+}

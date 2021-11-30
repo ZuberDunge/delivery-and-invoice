@@ -55,21 +55,29 @@ function OrderDetailsPage() {
                 <h3>Order Date : {OrderDeatil.orderDate} </h3>
             </div>
             <div className="mark-delivered">
-                <Box sx={{ minWidth: 120 }}>
-                    <FormControl fullWidth>
+                <div onClick={() => back("/")}  >
+                    <i class="fas fa-arrow-circle-left"></i>
+                </div>
+                <div> Delivery Status :
+                </div>
+                <div className="dropdown">
+                    <Box sx={{ minWidth: 160 }}>
+                        <FormControl fullWidth>
 
-                        <Select
-                            name="status"
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            value={userDetails.status}
-                            onChange={handleChange}
-                        >
-                            <MenuItem value={"Delivered"}>Delivered</MenuItem>
-                            <MenuItem value={"In Transit"}>In - Transit</MenuItem>
-                        </Select>
-                    </FormControl>
-                </Box>
+                            <Select
+                                name="status"
+                                labelId="demo-simple-select-label"
+                                id="demo-simple-select"
+                                value={userDetails.status}
+                                onChange={handleChange}
+                            >
+                                <MenuItem value={"Delivered"}>Delivered</MenuItem>
+                                <MenuItem value={"In Transit"}>In - Transit</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </Box>
+                </div>
+
             </div>
             <TableContainer component={Paper}>
                 <Table sx={{ maxWidth: 1400, margin: "auto" }} aria-label="simple table">
@@ -127,7 +135,7 @@ function OrderDetailsPage() {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <button className="button marg1tb" onClick={() => back("/")} >  Back </button>
+
         </div>
     );
 }
