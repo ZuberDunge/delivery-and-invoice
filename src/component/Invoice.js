@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import "./Style/Invoice.css"
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { ShippingDataContext } from './context/context';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -9,17 +9,18 @@ import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-
 function Invoice() {
     const { shippingData } = useContext(ShippingDataContext);
     const { id } = useParams()
+    let back = useNavigate();
     let OrderDeatil = shippingData.find(order => order.id === parseInt(id))
     let shippingCharges = 50;
-    let currentDate = (new Date()).toString().split(' ').splice(1, 3).join(' ');
+    let currentDate = Date().toLocaleString().slice(0, 21);
     return (
-        <div className="invoice-container">
+        <div className="invoice-container"><div className="flex">
             <h2>Order Invoice for {OrderDeatil.customerName} </h2>
-            <h5>Invoice Date : {currentDate} </h5>
+            <h3>Invoice Date : {currentDate} </h3>
+        </div>
             <TableContainer component={Paper}>
                 <Table sx={{ maxWidth: 1400, margin: "auto" }} aria-label="simple table">
                     <TableBody>
@@ -76,6 +77,7 @@ function Invoice() {
                     </TableBody>
                 </Table>
             </TableContainer>
+            <button className="button" onClick={() => back("/")} >  Back </button>
         </div>
     );
 }

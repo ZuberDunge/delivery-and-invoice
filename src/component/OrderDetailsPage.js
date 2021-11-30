@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import "./Style/Invoice.css"
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { ShippingDataContext } from './context/context';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -13,13 +13,17 @@ import Paper from '@mui/material/Paper';
 function OrderDetailsPage() {
     const { shippingData } = useContext(ShippingDataContext);
     const { id } = useParams()
+    let back = useNavigate();
     let OrderDeatil = shippingData.find(order => order.id === parseInt(id))
     let shippingCharges = 50;
     let currentDate = (new Date()).toString().split(' ').splice(1, 3).join(' ');
     return (
         <div className="invoice-container">
-            <h2>Order Number : {OrderDeatil.orderId} </h2>
-            <h5>Order Date : {OrderDeatil.orderDate} </h5>
+            <div className="flex">
+                <h2>Order Number : {OrderDeatil.orderId} </h2>
+                <h3>Order Date : {OrderDeatil.orderDate} </h3>
+            </div>
+
             <TableContainer component={Paper}>
                 <Table sx={{ maxWidth: 1400, margin: "auto" }} aria-label="simple table">
                     <TableBody>
@@ -76,6 +80,7 @@ function OrderDetailsPage() {
                     </TableBody>
                 </Table>
             </TableContainer>
+            <button className="button" onClick={() => back("/")} >  Back </button>
         </div>
     );
 }

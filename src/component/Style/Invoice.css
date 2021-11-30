@@ -2,3 +2,23 @@
     max-width: 1000px;
     margin: auto;
 }
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    padding: 0.5rem;
+    max-width: 360px;
+    width: 90%;
+    margin: 2rem auto;
+    cursor: pointer;
+    background-color: #E63946;
+    color: #FFF;
+    border-radius: 0.5rem;
+    outline: none;
+    border: 0;
+    font-size: 1.25rem;
+}
