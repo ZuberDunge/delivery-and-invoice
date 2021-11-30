@@ -77,7 +77,7 @@ function Invoice() {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <div className="flex-btns marg1tb"> <button className="button" onClick={() => back("/")} >  Back </button>
+            <div className="flex-btns marg1tb" id="btnDiv"> <button className="button" onClick={() => back("/")} >  Back </button>
                 <button className="button" onClick={() => window.print()} >  Print </button>
             </div>
         </div >

@@ -14,7 +14,7 @@ function Navbar() {
         <div className="nav-container">
             <nav>
                 <div className="brand-name"> <NavLink exact="true" to='/'> Delivery </NavLink></div>
-                <div className="log-in-btn"> <NavLink exact="true" to='/login'>{loggedIn ? "View Profile" : "Login"}  </NavLink></div>
+                <div className="log-in-btn" id="login-text"> <NavLink exact="true" to='/login'>{loggedIn ? "View Profile" : "Login"}  </NavLink></div>
             </nav>
         </div>
     );

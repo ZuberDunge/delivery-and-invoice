@@ -42,3 +42,13 @@
 button {
     padding: 0.5rem;
 }
+
+@media print{
+    #btnDiv{
+        display: none;
+    }
+
+    #login-text{
+        display: none;
+    }
+}

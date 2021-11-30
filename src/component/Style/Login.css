@@ -98,3 +98,7 @@ input:focus {
 .margauto {
     margin: auto !important;
 }
+
+@media print{
+  
+}

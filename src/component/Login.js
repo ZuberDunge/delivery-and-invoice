@@ -38,7 +38,7 @@ function Login() {
                             <input onChange={e => setPass(e.target.value)}
                                 required placeholder="Enter Your Password" type="Password" />
 
-                            <button type="submit" onClick={checkValid} className="login-btn">Log In</button>
+                            <button type="submit" onClick={checkValid} className="login-btn" >Log In</button>
 
 
                         </form>
