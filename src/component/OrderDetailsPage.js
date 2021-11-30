@@ -20,7 +20,7 @@ function OrderDetailsPage() {
     return (
         <div className="invoice-container">
             <div className="flex">
-                <h2>Order Number : {OrderDeatil.orderId} </h2>
+                <h3>Order Number : {OrderDeatil.orderId} </h3>
                 <h3>Order Date : {OrderDeatil.orderDate} </h3>
             </div>
 
@@ -80,7 +80,7 @@ function OrderDetailsPage() {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <button className="button" onClick={() => back("/")} >  Back </button>
+            <button className="button marg1tb" onClick={() => back("/")} >  Back </button>
         </div>
     );
 }
