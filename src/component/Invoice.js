@@ -18,7 +18,7 @@ function Invoice() {
     let currentDate = Date().toLocaleString().slice(0, 21);
     return (
         <div className="invoice-container"><div className="flex">
-            <h2>Order Invoice for {OrderDeatil.customerName} </h2>
+            <h3>Order Invoice for {OrderDeatil.customerName} </h3>
             <h3>Invoice Date : {currentDate} </h3>
         </div>
             <TableContainer component={Paper}>
@@ -77,8 +77,10 @@ function Invoice() {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <button className="button" onClick={() => back("/")} >  Back </button>
-        </div>
+            <div className="flex-btns marg1tb"> <button className="button" onClick={() => back("/")} >  Back </button>
+                <button className="button" onClick={() => window.print()} >  Print </button>
+            </div>
+        </div >
     );
 }
 
