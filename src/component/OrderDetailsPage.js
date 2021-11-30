@@ -10,7 +10,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 
-function Invoice() {
+function OrderDetailsPage() {
     const { shippingData } = useContext(ShippingDataContext);
     const { id } = useParams()
     let OrderDeatil = shippingData.find(order => order.id === parseInt(id))
@@ -18,8 +18,8 @@ function Invoice() {
     let currentDate = (new Date()).toString().split(' ').splice(1, 3).join(' ');
     return (
         <div className="invoice-container">
-            <h2>Order Invoice for {OrderDeatil.customerName} </h2>
-            <h5>Invoice Date : {currentDate} </h5>
+            <h2>Order Number : {OrderDeatil.orderId} </h2>
+            <h5>Order Date : {OrderDeatil.orderDate} </h5>
             <TableContainer component={Paper}>
                 <Table sx={{ maxWidth: 1400, margin: "auto" }} aria-label="simple table">
                     <TableBody>
@@ -80,4 +80,4 @@ function Invoice() {
     );
 }
 
-export default Invoice;
+export default OrderDetailsPage;
