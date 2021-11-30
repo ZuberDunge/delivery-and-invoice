@@ -9,12 +9,13 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
+import Navbar from '../navbar/Navbar';
 function Home() {
     const { shippingData } = useContext(ShippingDataContext)
     console.log(shippingData);
     return (
         <>
+            <Navbar />
             <div className="table">
                 <TableContainer component={Paper}>
                     <Table sx={{ maxWidth: 1000, margin: "auto" }} aria-label="simple table">
@@ -43,7 +44,7 @@ function Home() {
                 </TableContainer>
             </div>
             <div>
-                <h2>Chnages from the Development Branch</h2>
+                <h2>Changes from the Development Branch</h2>
             </div>
         </>
     )

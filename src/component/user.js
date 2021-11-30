@@ -1,9 +1,10 @@
 import "./Style/Login.css"
 import { Link } from "react-router-dom";
-
+import Navbar from "./navbar/Navbar";
 function UserProfile() {
     return (
         <>
+            <Navbar />
             <div className="user-profile">
                 <div className="user-flex">
 
@@ -15,7 +16,7 @@ function UserProfile() {
                         <div>
                             <h6>iamZuberDunge@gmail.com </h6>
                         </div>
-                        <Link to="/"><button onClick={() => localStorage.removeItem("user")
+                        <Link to="/login"><button onClick={() => localStorage.removeItem("user")
 
 
                         } className="login-btn">Log Out</button></Link>
