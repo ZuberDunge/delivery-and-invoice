@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Pacifico&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    background: #FFFECB;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .HIDE-ON-PHONE {
+        display: none !important;
+    }
+
+    .css-1azl6jz-MuiTableCell-root {
+        width: 50%;
+    }
+
+
+}
+
+thead th {
+    font-size: 1rem !important;
+
+    color: #fff !important;
+}
+
+thead {
+    background-color: #E63946;
+    border-radius: 0 !important;
+}
+
+h2 {
+    text-align: center;
+}
+
+th {
+    font-weight: 600 !important;
+}
+
+table {
+    border-radius: 0 !important;
+}
+
+
+tbody tr {
+    font-size: 1rem !important;
+    background-color: #CCFBFE;
+
+}
+
+tbody tr th,
+td {
+    font-size: 1rem !important;
+    color: #003049 !important;
+}
+
+tbody a {
+    color: #003049 !important;
+}
+
+table {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+th,
+td {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+    background-color: inherit !important;
+}
+
+.table {
+    max-width: 1000px;
+    margin: 2rem auto;
+
+}
+
+.get-invoice {
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+.nav-container {
+    padding: 1rem 2rem;
+    background-color: #CCFBFE;
+
+}
+
+nav {
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #003049;
+}
+
+.log-in-btn {
+    background-color: #003049;
+    color: #FFF;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: 500;
+}
