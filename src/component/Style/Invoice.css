@@ -28,12 +28,12 @@
 
 .button {
 
-    padding: 0.5rem;
-    width: 90%;
+    padding: 0.5rem 1rem;
+
     cursor: pointer;
     background-color: #E63946;
     color: #FFF;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     outline: none;
     border: 0;
     font-size: 1.25rem;
