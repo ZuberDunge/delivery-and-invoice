@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-
 export const ShippingDataContext = createContext()
 
 const ShippingDataProvider = (props) => {
@@ -27,6 +26,29 @@ const ShippingDataProvider = (props) => {
             customerName: "Rahul",
             Address: 'sant nagar',
             sellerName: "Grocery Guru",
+        }, {
+            id: 3,
+            status: 'Delivered',
+            itemName: "Mobile",
+            orderId: 102,
+            orderDate: 21 / 11 / 21,
+            price: 50,
+            quantity: 1,
+            customerName: "Viraj",
+            Address: 'Gujrat',
+            sellerName: "Amazon",
+        },
+        {
+            id: 4,
+            status: 'In Transit',
+            itemName: "Dhaniya",
+            orderId: 103,
+            orderDate: 29 / 11 / 21,
+            price: 15,
+            quantity: 1,
+            customerName: "Rahul",
+            Address: 'New Delhi',
+            sellerName: "Paritosh",
         },
     ])
     const shippingData = shippingDetails;
